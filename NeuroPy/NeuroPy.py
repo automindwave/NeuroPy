@@ -116,7 +116,7 @@ class NeuroPy(object):
         # Try to connect to serial port and start a separate thread
         # for data collection
         if self.__threadRun == True:
-            print "Mindwave has already started!"
+            print ("Mindwave has already started!")
             return
 
         if self.__srl == None:
