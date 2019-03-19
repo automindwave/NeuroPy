@@ -124,7 +124,7 @@ class NeuroPy(object):
                 self.__srl = serial.Serial(
                     self.__serialPort, self.__serialBaudRate)
             except serial.serialutil.SerialException as e:
-                print str(e)
+                print(e)
                 return
         else:
             self.__srl.open()
