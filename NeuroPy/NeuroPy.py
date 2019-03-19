@@ -123,7 +123,7 @@ class NeuroPy(object):
             try:
                 self.__srl = serial.Serial(
                     self.__serialPort, self.__serialBaudRate)
-            except serial.serialutil.SerialException, e:
+            except serial.serialutil.SerialException as e:
                 print str(e)
                 return
         else:
