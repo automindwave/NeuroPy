@@ -83,9 +83,9 @@ class NeuroPy(object):
     def __init__(self, port = None, baudRate=57600, devid=None):
         if port == None:
             platform = sys.platform
-            if platform == "win32":
-                port = "COM6"
-            elif platform.startswith("linux") or platform == 'darwin':
+            if platform == "win64":
+                port = "COM5"
+            elif platform.startswith("windows") or platform == 'darwin':
                 port = "/dev/rfcomm0"
 
         self.__devid = devid
@@ -116,7 +116,7 @@ class NeuroPy(object):
         # Try to connect to serial port and start a separate thread
         # for data collection
         if self.__threadRun == True:
-            print "Mindwave has already started!"
+            print ("Mindwave has already started!")
             return
 
         if self.__srl == None:
